@@ -49,7 +49,7 @@ export class RenouncedFreezeFilter implements Filter {
 
       const result = {
         ok: ok,
-        message: ok ? undefined : `RenouncedFreeze -> Creator can ${message.join(' and ')} tokens`,
+        message: ok ? undefined : `RenouncedFreeze -> Creator can ${message.join(' and ')} tokens ${poolKeys.lpMint}`,
       };
 
       if (result.ok) {
@@ -60,13 +60,13 @@ export class RenouncedFreezeFilter implements Filter {
     } catch (e) {
       logger.error(
         { mint: poolKeys.baseMint },
-        `RenouncedFreeze -> Failed to check if creator can ${this.errorMessage.join(' and ')} tokens`,
+        `RenouncedFreeze -> Failed to check if creator can ${this.errorMessage.join(' and ')} tokens ${poolKeys.lpMint}`,
       );
     }
 
     return {
       ok: false,
-      message: `RenouncedFreeze -> Failed to check if creator can ${this.errorMessage.join(' and ')} tokens`,
+      message: `RenouncedFreeze -> Failed to check if creator can ${this.errorMessage.join(' and ')} tokens ${poolKeys.lpMint}`,
     };
   }
 }
