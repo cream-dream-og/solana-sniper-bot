@@ -18,9 +18,6 @@ To run the script you need to:
 - Install dependencies by typing: `npm install`
 - Run the script by typing: `npm run start` in terminal
 
-You should see the following output:  
-![output](readme/output.png)
-
 ### Configuration
 
 #### Wallet
