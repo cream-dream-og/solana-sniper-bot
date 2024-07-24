@@ -38,6 +38,6 @@ export class PoolSizeFilter implements Filter {
       logger.error({ mint: poolKeys.baseMint }, `Failed to check pool size`);
     }
 
-    return { ok: false, message: 'PoolSize -> Failed to check pool size' };
+    return { ok: false, message: 'Ok call, but PoolSize -> Failed to check pool size' };
   }
 }
