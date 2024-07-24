@@ -47,7 +47,7 @@ export class MutableFilter implements Filter {
         mutable = this.checkMutable
       }
       // mutable = !this.checkMutable || deserialize[0].isMutable;
-      logger.info({ mutable, checkMutable: this.checkMutable, isMutable: deserialize[0].isMutable });
+      logger.debug({ mutable, checkMutable: this.checkMutable, isMutable: deserialize[0].isMutable });
       const hasSocials = !this.checkSocials || (await this.hasSocials(deserialize[0]));
       const ok = !mutable && hasSocials;
       const message: string[] = [];
